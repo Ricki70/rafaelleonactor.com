@@ -1,0 +1,26 @@
+body{
+    background-color: aquamarine;
+}
+
+.div_rrss{
+    height: 31px;
+    width:175px;
+}
+
+.div_navbar_relleno{
+    width: 10%;
+    height: 31px;
+}
+
+.link_rrss{
+    margin-inline: 5px;
+}
+
+.img_rrss{
+    height: 25px;
+    width: 25px;
+}
+
+.offcanvas{
+    flex-grow: unset!important;
+}
