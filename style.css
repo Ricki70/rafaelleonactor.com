@@ -53,6 +53,11 @@ body::-webkit-scrollbar {
   margin-bottom: 20px;;
 }
 
+.row.margen{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 #div_gallery{
     margin-top: 10px;
 }
