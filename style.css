@@ -2,6 +2,7 @@ body{
     background-color: black;
     overflow-y: scroll; /* Muestra la barra de scroll vertical */
     scrollbar-width: none; /* Oculta la barra de scroll en navegadores modernos */
+    padding-top: 3%;
 }
 
 /* Estilo para ocultar la barra de scroll vertical en navegadores WebKit (Chrome, Safari) */
