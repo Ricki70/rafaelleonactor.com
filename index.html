@@ -1,21 +1,60 @@
+<!--head -> cabecera del documento HTML ¡OJO! no confundir con la cabecera de la pagina web mas abajo-->
+<!--body -> etiqueta que albergara TODO el contenido de la web-->
+<!--nav (navegation) ->  etiqueta de navegacion, esta etiqueta contiene todo el contenido del menu de la cabecera de la pagina-->
+<!--div (division) -> etiqueta de división, simplemente sirve para organizar el codigo, no es visible en la web a no ser que se fuerce intencionadamente su visibilidad-->
+<!--a (anchor) -> viene de ancla que es como antiguamente se le llamaba a los links o hipervinculos, esta etiqueta por tanto representa un vinculo, enlace o link ya sea
+               a otra pagina diferente, o a puntos concretos de la misma pagina-->
+<!--img (image) -> como su propio nombre indica a traves de esta etiqueta se pueden insertar imagenes en la pagina web-->
+
+<!--todas las palabras que se encuentran entre la etiqueta de apertura y la de cierre de un elemento HTML y no sean palabras reconocibles dentro de la pagina web, se llaman
+    atributos, y sirven para establecer diferentes propiedades, funcionalidades, formas y estilos a los elementos HTML en el que se encuentran, cada etiqueta tiene sus propias
+    propiedades y, aunque en ocasiones coinciden, no siempre tienen porque hacerlo. su uso depende de la intencion que se tenga y la etiqueta en cuestion-->
+
 <!DOCTYPE html>
+<!--Idioma predeterminado de la pagina web (es -> español || en -> English (Ingles))-->
 <html lang="es">
 
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!--Inicio de la etiqueta <head>-->
+
 <head>
+    <!--Codificacion de caracteres (utf-8 es el estandar mundial basado en la codificacion ascii)-->
     <meta charset="utf-8">
+    <!--Etiqueta y atributos para la adaptacion de la pagina web a diferentes tamaños de pantalla (responsive)-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Libreria de estilos CSS de BootStrap, para simplificar y mejorar el diseño de la web-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--Hoja de estilos personalizada para complementar la libreria existente de BootStrap-->
     <link href="./style.css" rel="stylesheet" />
+    <!--Titulo que saldra en la parte superior del navegador, en la pestaña correspondiente a la web-->
     <title>Rafael Leon</title>
 </head>
+<!--fin de la etiqueta <head>-->
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!--inicio de la etiqueta <body>-->
 
 <body>
 
+    <!--*************************
+        *       CABECERA        *
+        *************************-->
+
+    <!--inicio de la etiqueta <nav>-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <!--div-->
         <div class="container-fluid">
+
+            <!--===========| Bloque de codigo correspondiente a los links en forma de imagen a las respectivas redes sociales |===========-->
+
             <div class="div_rrss">
-                <a class="link_rrss" href="https://www.instagram.com/rafaelleonmarzo/?igshid=NGExMmI2YTkyZg%3D%3D" target="_blank">
+                <!--a-->
+                <a class="link_rrss" href="https://www.instagram.com/rafaelleonmarzo/?igshid=NGExMmI2YTkyZg%3D%3D"
+                    target="_blank">
+                    <!--img-->
                     <img class="img_rrss" src="/Imagenes/rrss/instagram.png" alt="Bootstrap">
                 </a>
                 <a class="link_rrss" href="https://pro.imdb.com/name/nm14970870/images" target="_blank">
@@ -28,6 +67,10 @@
                     <img class="img_rrss" src="/Imagenes/rrss/youtube.png" alt="Bootstrap">
                 </a>
             </div>
+            <!--===========================================================================================================================-->
+
+            <!--===========| Bloque de codigo correspondiente a los links de la barra de navegacion superior (menu desplegable si lo ves en dispositivos moviles) |===========-->
+
             <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
                 aria-labelledby="offcanvasDarkNavbarLabel">
                 <div class="offcanvas-header">
@@ -58,6 +101,10 @@
                     </ul>
                 </div>
             </div>
+
+            <!--=============================================================================================================================================================-->
+
+            <!--===========| Bloque de codigo correspondiente al boton que despliega el menu (Solo visible en dispositivos moviles) |===========-->
             <div class="div_navbar_relleno"></div>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
@@ -66,111 +113,140 @@
             </button>
         </div>
     </nav>
+    <!--Fin de la etiqueta <nav>-->
 
-    <img src="/Imagenes/Sesiones/LeonardoDiCaprio.jpg" class="img-fluid" alt="...">
+    <!--*************************
+        *     FIN CABECERA      *
+        *************************-->
 
+    <!--*************************
+        *   CUERPO DE LA WEB    *
+        *************************-->
+
+    <!--PRESENTACIÓN-->
+    <!--imagen de la presentacion-->
+    <img src="/Imagenes/Sesiones/Rectificadas/cabecera.png" class="img-fluid" alt="...">
+
+    <!--MEDIA-->
+    <!--titulo de seccion-->
     <div class="div_titulo" id="div_media">
         <h1>Media</h1>
     </div>
 
+    <div class="container" id="videobook">
+        <img src="Imagenes/Miniaturas/VideoBook.png" alt="Miniatura Video 1" class="video-thumbnail"
+                    data-video="xzzh-lhxdLE">
+    </div>
+
+    <!--GALERIA DE VIDEOS-->
     <div class="container">
         <div class="row">
-          <!-- Las miniaturas de los videos se agregarán dinámicamente aquí -->
-          <div class="col-md-3">
-            <img src="Imagenes/Miniaturas/escena narco.jpg" alt="Miniatura Video 1" class="video-thumbnail" data-video="bdiU-I06a4k">
-          </div>
-          <div class="col-md-3">
-            <img src="Imagenes/Miniaturas/mulholland drive.jpg" alt="Miniatura Video 2" class="video-thumbnail" data-video="mfcikN2gV1w">
-          </div>
-          <div class="col-md-3">
-            <img src="Imagenes/Miniaturas/el triangulo de la tristeza.jpg" alt="Miniatura Video 2" class="video-thumbnail" data-video="2P6ugVeqn2Y">
-          </div>
-          <div class="col-md-3">
-            <img src="Imagenes/Miniaturas/el club de la lucha.jpg" alt="Miniatura Video 2" class="video-thumbnail" data-video="_hU13EK-PWU">
-          </div>
-          <!-- Agregar más miniaturas de videos -->
+            <!-- Las miniaturas de los videos se agregarán-->
+            <div class="col-md-3">
+                <img src="Imagenes/Miniaturas/escena narco.jpg" alt="Miniatura Video 1" class="video-thumbnail"
+                    data-video="bdiU-I06a4k">
+            </div>
+            <div class="col-md-3">
+                <img src="Imagenes/Miniaturas/mulholland drive.jpg" alt="Miniatura Video 2" class="video-thumbnail"
+                    data-video="mfcikN2gV1w">
+            </div>
+            <div class="col-md-3">
+                <img src="Imagenes/Miniaturas/el triangulo de la tristeza.jpg" alt="Miniatura Video 2"
+                    class="video-thumbnail" data-video="2P6ugVeqn2Y">
+            </div>
+            <div class="col-md-3">
+                <img src="Imagenes/Miniaturas/el club de la lucha.jpg" alt="Miniatura Video 2" class="video-thumbnail"
+                    data-video="_hU13EK-PWU">
+            </div>
+            <!-- Agregar más miniaturas de videos -->
         </div>
-      </div>
-      
-      <!-- Modal para mostrar el video en primer plano -->
-<div id="videoModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-      <div class="video-container embed-responsive embed-responsive-16by9">
-        <iframe id="videoFrame" class="embed-responsive-item" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
     </div>
-  </div>
 
+    <!-- Modal para mostrar el video en primer plano -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="video-container embed-responsive embed-responsive-16by9">
+                <iframe id="videoFrame" class="embed-responsive-item" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!--Galeria-->
+    <!--titulo de seccion-->
     <div class="div_titulo" id="div_galeria">
         <h1>Fotos</h1>
     </div>
 
+    <!--GALERIA DE FOTOS DE SESION-->
     <!-- Contenedor de la galería -->
     <div class="container-fluid" id="div_gallery">
         <div class="row" id="gallery">
             <!-- Las imágenes se agregarán dinámicamente aquí -->
+
             <div class="col-md-3">
-                <img src="/Imagenes/Sesiones/LeonardoDiCaprio.jpg" alt="Imagen 1" class="gallery-img">
-            </div>
-            <div class="col-md-3">
-                <img src="Imagenes/Sesiones/LeonardoDiCaprio_1.jpg" alt="Imagen 2" class="gallery-img">
-            </div>
-            <div class="col-md-3">
-                <img src="Imagenes/Sesiones/LeonardoDiCaprio_2.jpg" alt="Imagen 2" class="gallery-img">
-            </div>
-            <div class="col-md-3">
-                <img src="Imagenes/Sesiones/LeonardoDiCaprio_3.jpg" alt="Imagen 2" class="gallery-img">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Sesiones/Rectificadas/2s.png" alt="Imagen 1" class="gallery-img">
+                </div>
             </div>
 
             <div class="col-md-3">
-                <img src="/Imagenes/Sesiones/LeonardoDiCaprio_3.jpg" alt="Imagen 1" class="gallery-img">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Sesiones/Rectificadas/8s.png" alt="Imagen 1" class="gallery-img">
+                </div>
             </div>
+
+
             <div class="col-md-3">
-                <img src="Imagenes/Sesiones/LeonardoDiCaprio_2.jpg" alt="Imagen 2" class="gallery-img">
-            </div>
-            <div class="col-md-3">
-                <img src="Imagenes/Sesiones/LeonardoDiCaprio.jpg" alt="Imagen 2" class="gallery-img">
-            </div>
-            <div class="col-md-3">
-                <img src="Imagenes/Sesiones/LeonardoDiCaprio_1.jpg" alt="Imagen 2" class="gallery-img">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Sesiones/Rectificadas/10s.png" alt="Imagen 1" class="gallery-img">
+                </div>
             </div>
 
             <div class="col-md-3">
-                <img src="/Imagenes/Sesiones/LeonardoDiCaprio_2.jpg" alt="Imagen 1" class="gallery-img">
-            </div>
-            <div class="col-md-3">
-                <img src="Imagenes/Sesiones/LeonardoDiCaprio_3.jpg" alt="Imagen 2" class="gallery-img">
-            </div>
-            <div class="col-md-3">
-                <img src="Imagenes/Sesiones/LeonardoDiCaprio_1.jpg" alt="Imagen 2" class="gallery-img">
-            </div>
-            <div class="col-md-3">
-                <img src="Imagenes/Sesiones/LeonardoDiCaprio.jpg" alt="Imagen 2" class="gallery-img">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Sesiones/Rectificadas/24s.png" alt="Imagen 1" class="gallery-img">
+                </div>
             </div>
 
             <div class="col-md-3">
-                <img src="/Imagenes/Sesiones/LeonardoDiCaprio_1.jpg" alt="Imagen 1" class="gallery-img">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Sesiones/Rectificadas/11s.png" alt="Imagen 1" class="gallery-img">
+                </div>
             </div>
+
             <div class="col-md-3">
-                <img src="Imagenes/Sesiones/LeonardoDiCaprio.jpg" alt="Imagen 2" class="gallery-img">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Sesiones/Rectificadas/28s.png" alt="Imagen 1" class="gallery-img">
+                </div>
             </div>
+
             <div class="col-md-3">
-                <img src="Imagenes/Sesiones/LeonardoDiCaprio_3.jpg" alt="Imagen 2" class="gallery-img">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Sesiones/Rectificadas/14s.png" alt="Imagen 1" class="gallery-img">
+                </div>
             </div>
+
             <div class="col-md-3">
-                <img src="Imagenes/Sesiones/LeonardoDiCaprio_2.jpg" alt="Imagen 2" class="gallery-img">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Sesiones/Rectificadas/7s.png" alt="Imagen 1" class="gallery-img">
+                </div>
             </div>
+
         </div>
     </div>
 
+    <!--GALERIA DE FOTOS DE ESCENA-->
     <div class="div_titulo">
         <h1>Escenas</h1>
     </div>
 
     <div class="container-fluid">
         <div class="row">
-            <!-- Las imágenes se agregarán dinámicamente aquí -->
+            <!-- Las imágenes se agregarán-->
+
             <div class="col-md-2"></div>
             <div class="col-md-2">
                 <img src="/Imagenes/Escenas/LeonardoDiCaprio_1.jpg" alt="Imagen 1" class="gallery-img">
@@ -186,6 +262,7 @@
             </div>
             <div class="col-md-2"></div>
 
+
             <div class="col-md-2"></div>
             <div class="col-md-2">
                 <img src="/Imagenes/Escenas/LeonardoDiCaprio_2.jpg" alt="Imagen 1" class="gallery-img">
@@ -200,6 +277,8 @@
                 <img src="/Imagenes/Escenas/LeonardoDiCaprio_1.jpg" alt="Imagen 2" class="gallery-img">
             </div>
             <div class="col-md-2"></div>
+
+
             <div class="col-md-2"></div>
             <div class="col-md-2">
                 <img src="/Imagenes/Escenas/LeonardoDiCaprio_3.jpg" alt="Imagen 1" class="gallery-img">
@@ -214,6 +293,8 @@
                 <img src="/Imagenes/Escenas/LeonardoDiCaprio_2.jpg" alt="Imagen 2" class="gallery-img">
             </div>
             <div class="col-md-2"></div>
+
+
             <div class="col-md-2"></div>
             <div class="col-md-2">
                 <img src="/Imagenes/Escenas/LeonardoDiCaprio_4.jpg" alt="Imagen 1" class="gallery-img">
@@ -231,6 +312,8 @@
         </div>
     </div>
 
+    <!--CURRICULUM-->
+    <!--titulo de seccion-->
     <div class="div_titulo" id="div_curriculum">
         <h1>Curriulum</h1>
     </div>
@@ -244,8 +327,9 @@
             </span>
         </a>
     </div>
-    
 
+    <!--CONTACTO-->
+    <!--titulo de seccion-->
     <div class="div_titulo" id="div_contacto">
         <h1>Contacto</h1>
     </div>
@@ -253,6 +337,11 @@
         <img src="/Imagenes/Sesiones/LeonardoDiCaprio.jpg" class="img-fluid" alt="...">
     </div>
 
+    <!--*******************************
+        *  FIN DE CUERPO DE LA WEB    *
+        *******************************-->
+
+    <!--Scripts de JS de BootStrap para animaciones y ciertas funcionalidades de la web-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
@@ -262,7 +351,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
         integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
         crossorigin="anonymous"></script>
+
+    <!--Script personalizado para funciones especificas-->
     <script src="script.js"></script>
 </body>
+<!--fin de la etiqueta body-->
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 </html>
