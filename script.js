@@ -71,11 +71,8 @@ function openVideoModal(videoId) {
 
   var btncerrar = document.querySelector(".close");
   var videoContainer = document.querySelector(".modal-content");
-  var videoAspectRatio = 16 / 9;
 
-  var windowAspectRatio = window.innerWidth / window.innerHeight;
-
-  if (Math.abs(windowAspectRatio - videoAspectRatio) < 0.3) {
+  if (window.innerWidth > window.innerHeight) {
     videoContainer.classList.add("with-margin");
     btncerrar.classList.add("with-margin");
   } else {
@@ -97,6 +94,15 @@ function closeVideoModal() {
   videoFrame.src = "";
   modal.style.display = "none";
 }
+
+document.getElementById("cerrarmodal").addEventListener("click", function (e) {
+  var modal = document.getElementById("videoModal");
+  var videoFrame = document.getElementById("videoFrame");
+  if (e.target === this) {
+    videoFrame.src = "";
+    modal.style.display = "none";
+  }
+});
 
 // Event listener para las miniaturas de video
 var thumbnails = document.getElementsByClassName("video-thumbnail");
