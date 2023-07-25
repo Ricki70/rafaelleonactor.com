@@ -45,6 +45,11 @@ a{
     display: flex;
 }
 
+.div_titulo.modelo{
+  margin-top: 4rem!important;
+  border: none!important;
+}
+
 #videobook{
   box-shadow: 2px 2px 2px 2px;
   margin-bottom: 20px;;
