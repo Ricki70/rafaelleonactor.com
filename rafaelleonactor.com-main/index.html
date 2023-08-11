@@ -1,0 +1,416 @@
+<!--head -> cabecera del documento HTML ¡OJO! no confundir con la cabecera de la pagina web mas abajo-->
+<!--body -> etiqueta que albergara TODO el contenido de la web-->
+<!--nav (navegation) ->  etiqueta de navegacion, esta etiqueta contiene todo el contenido del menu de la cabecera de la pagina-->
+<!--div (division) -> etiqueta de división, simplemente sirve para organizar el codigo, no es visible en la web a no ser que se fuerce intencionadamente su visibilidad-->
+<!--a (anchor) -> viene de ancla que es como antiguamente se le llamaba a los links o hipervinculos, esta etiqueta por tanto representa un vinculo, enlace o link ya sea
+               a otra pagina diferente, o a puntos concretos de la misma pagina-->
+<!--img (image) -> como su propio nombre indica a traves de esta etiqueta se pueden insertar imagenes en la pagina web-->
+
+<!--todas las palabras que se encuentran entre la etiqueta de apertura y la de cierre de un elemento HTML y no sean palabras reconocibles dentro de la pagina web, se llaman
+    atributos, y sirven para establecer diferentes propiedades, funcionalidades, formas y estilos a los elementos HTML en el que se encuentran, cada etiqueta tiene sus propias
+    propiedades y, aunque en ocasiones coinciden, no siempre tienen porque hacerlo. su uso depende de la intencion que se tenga y la etiqueta en cuestion-->
+
+<!DOCTYPE html>
+<!--Idioma predeterminado de la pagina web (es -> español || en -> English (Ingles))-->
+<html lang="es">
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!--Inicio de la etiqueta <head>-->
+
+<head>
+    <!--Codificacion de caracteres (utf-8 es el estandar mundial basado en la codificacion ascii)-->
+    <meta charset="utf-8">
+    <!--Etiqueta y atributos para la adaptacion de la pagina web a diferentes tamaños de pantalla (responsive)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Libreria de estilos CSS de BootStrap, para simplificar y mejorar el diseño de la web-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--Hoja de estilos personalizada para complementar la libreria existente de BootStrap-->
+    <link href="./style.css" rel="stylesheet" />
+    <!--Titulo que saldra en la parte superior del navegador, en la pestaña correspondiente a la web-->
+    <title>Rafael Leon</title>
+</head>
+<!--fin de la etiqueta <head>-->
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!--inicio de la etiqueta <body>-->
+
+<body>
+
+    <!--*************************
+        *       CABECERA        *
+        *************************-->
+
+    <!--inicio de la etiqueta <nav>-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <!--div-->
+        <div class="container-fluid">
+
+            <!--===========| Bloque de codigo correspondiente a los links en forma de imagen a las respectivas redes sociales |===========-->
+
+            <div class="div_rrss">
+                <!--a-->
+                <a class="link_rrss" href="https://www.instagram.com/rafaelleonmarzo/?igshid=NGExMmI2YTkyZg%3D%3D"
+                    target="_blank">
+                    <!--img-->
+                    <img class="img_rrss" src="/Recursos/rrss/instagram.png" alt="Bootstrap">
+                </a>
+                <a class="link_rrss" href="https://pro.imdb.com/name/nm14970870/images" target="_blank">
+                    <img class="img_rrss" src="/Recursos/rrss/imdb.png" alt="Bootstrap">
+                </a>
+                <a class="link_rrss" href="https://vimeo.com/828812970" target="_blank">
+                    <img class="img_rrss" src="/Recursos/rrss/vimeo.png" alt="Bootstrap">
+                </a>
+                <a class="link_rrss" href="https://www.youtube.com/@rafaelleonmarzo" target="_blank">
+                    <img class="img_rrss" src="/Recursos/rrss/youtube.png" alt="Bootstrap">
+                </a>
+            </div>
+            <!--===========================================================================================================================-->
+
+            <!--===========| Bloque de codigo correspondiente a los links de la barra de navegacion superior (menu desplegable si lo ves en dispositivos moviles) |===========-->
+
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title justify-content-center" id="offcanvasDarkNavbarLabel">Menú</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#div_media">Media</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#div_galeria">Galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#div_curriculum">Curriculum</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#div_contacto">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="modelo.html">Modelo</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--=============================================================================================================================================================-->
+
+            <!--===========| Bloque de codigo correspondiente al boton que despliega el menu (Solo visible en dispositivos moviles) |===========-->
+            <div class="div_navbar_relleno"></div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <!--Fin de la etiqueta <nav>-->
+
+    <!--*************************
+        *     FIN CABECERA      *
+        *************************-->
+
+    <!--*************************
+        *   CUERPO DE LA WEB    *
+        *************************-->
+
+    <!--PRESENTACIÓN-->
+    <!--imagen de la presentacion-->
+    <img src="/Imagenes/Cabecera/cabecera.png" class="img-fluid mt-5" alt="...">
+
+    <!--MEDIA-->
+    <!--titulo de seccion-->
+    <div class="div_titulo" id="div_media">
+        <h1>Media</h1>
+    </div>
+
+    <div class="container" id="videobook">
+        <img src="Imagenes/Miniaturas/VideoBook.png" alt="Miniatura Video 1" class="video-thumbnail"
+                    data-video="xzzh-lhxdLE">
+    </div>
+
+    <!--GALERIA DE VIDEOS-->
+    <div class="container">
+        <div class="row margen">
+            <!-- Las miniaturas de los videos se agregarán-->
+            <div class="col-md-3">
+                <img src="Imagenes/Miniaturas/escena narco.png" alt="Miniatura Video 1" class="video-thumbnail"
+                    data-video="bdiU-I06a4k">
+            </div>
+            <div class="col-md-3">
+                <img src="Imagenes/Miniaturas/mulholland drive.png" alt="Miniatura Video 2" class="video-thumbnail"
+                    data-video="mfcikN2gV1w">
+            </div>
+            <div class="col-md-3">
+                <img src="Imagenes/Miniaturas/el triangulo de la tristeza.png" alt="Miniatura Video 2"
+                    class="video-thumbnail" data-video="2P6ugVeqn2Y">
+            </div>
+            <div class="col-md-3">
+                <img src="Imagenes/Miniaturas/el club de la lucha.png" alt="Miniatura Video 2" class="video-thumbnail"
+                    data-video="_hU13EK-PWU">
+            </div>
+        </div>
+
+        <div class="row margen">
+            <!-- Las miniaturas de los videos se agregarán-->
+            <div class="col-md-3">
+                <img src="Imagenes/Miniaturas/monologo.png" alt="Miniatura Video 1" class="video-thumbnail"
+                    data-video="PuiMIP3UjJs">
+            </div>
+            <div class="col-md-3">
+                <img src="Imagenes/Miniaturas/escena seinfeld.png" alt="Miniatura Video 2" class="video-thumbnail"
+                    data-video="VEGTKjOXxPU">
+            </div>
+            <div class="col-md-3">
+                <img src="Imagenes/Miniaturas/9vidas.png" alt="Miniatura Video 2"
+                    class="video-thumbnail" data-video="xEyrjvmzP7Q">
+            </div>
+            <div class="col-md-3">
+                <img src="Imagenes/Miniaturas/medina y castro actores madrid con tonucha vidal.png" alt="Miniatura Video 2" class="video-thumbnail"
+                    data-video="Se-Sx7Vtnw4">
+            </div>
+        </div>
+
+        <div class="row margen">
+            <!-- Las miniaturas de los videos se agregarán-->
+            <div class="col-md-3">
+                <img src="Imagenes/Miniaturas/lucho.png" alt="Miniatura Video 1" class="video-thumbnail"
+                    data-video="QvP4xrYuEXY">
+            </div>
+            <div class="col-md-3">
+                <img src="Imagenes/Miniaturas/camera cafe.png" alt="Miniatura Video 2" class="video-thumbnail"
+                    data-video="2YfQZW0xKyY">
+            </div>
+            <div class="col-md-3">
+                <img src="Imagenes/Miniaturas/taxidriver ii.png" alt="Miniatura Video 2"
+                    class="video-thumbnail" data-video="Zyc0-a0ykGU">
+            </div>
+            <div class="col-md-3">
+                <img src="Imagenes/Miniaturas/taxidriver.png" alt="Miniatura Video 2" class="video-thumbnail"
+                    data-video="g4YVqsvUJKI">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para mostrar el video en primer plano -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content" id="cerrarmodal">
+            <span class="close">&times;</span>
+            <div class="video-container embed-responsive embed-responsive-16by9">
+                <iframe id="videoFrame" class="embed-responsive-item" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!--Galeria-->
+    <!--titulo de seccion-->
+    <div class="div_titulo" id="div_galeria">
+        <h1>Fotos</h1>
+    </div>
+
+    <!--GALERIA DE FOTOS DE SESION-->
+    <!-- Contenedor de la galería -->
+    <div class="container-fluid" id="div_gallery">
+        <div class="row" id="gallery">
+            <!-- Las imágenes se agregarán dinámicamente aquí -->
+
+            <div class="col-md-3">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Sesiones/1.png" alt="Imagen 1" class="gallery-img">
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Sesiones/2.png" alt="Imagen 1" class="gallery-img">
+                </div>
+            </div>
+
+
+            <div class="col-md-3">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Sesiones/3.png" alt="Imagen 1" class="gallery-img">
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Sesiones/4.png" alt="Imagen 1" class="gallery-img">
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Sesiones/5.png" alt="Imagen 1" class="gallery-img">
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Sesiones/6.png" alt="Imagen 1" class="gallery-img">
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Sesiones/7.png" alt="Imagen 1" class="gallery-img">
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Sesiones/8.png" alt="Imagen 1" class="gallery-img">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--GALERIA DE FOTOS DE ESCENA
+    <div class="div_titulo">
+        <h1>Escenas</h1>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row margen">
+            Las imágenes se agregarán
+
+            <div class="col-md-2"></div>
+            <div class="col-md-2">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Escenas/1.png" alt="Imagen 1" class="gallery-img">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Escenas/1.png" alt="Imagen 1" class="gallery-img">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Escenas/1.png" alt="Imagen 1" class="gallery-img">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Escenas/1.png" alt="Imagen 1" class="gallery-img">
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <div class="row margen">
+            <div class="col-md-2"></div>
+            <div class="col-md-2">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Escenas/1.png" alt="Imagen 1" class="gallery-img">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Escenas/1.png" alt="Imagen 1" class="gallery-img">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Escenas/1.png" alt="Imagen 1" class="gallery-img">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Escenas/1.png" alt="Imagen 1" class="gallery-img">
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <div class="row margen">
+            <div class="col-md-2"></div>
+            <div class="col-md-2">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Escenas/1.png" alt="Imagen 1" class="gallery-img">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Escenas/1.png" alt="Imagen 1" class="gallery-img">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Escenas/1.png" alt="Imagen 1" class="gallery-img">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="square-image-container">
+                    <img src="/Imagenes/Escenas/1.png" alt="Imagen 1" class="gallery-img">
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>-->
+
+    <!--CURRICULUM-->
+    <!--titulo de seccion-->
+    <div class="div_titulo" id="div_curriculum">
+        <h1>Curriulum</h1>
+    </div>
+
+    <div class="container d-flex flex-column align-items-center">
+        <img src="/Curriculum/cv.jpg" class="img-fluid" alt="...">
+        <a href="/Curriculum/Rafel_Leon_CV.pdf" class="btn btn-primary mt-2" download="Rafel_Leon_CV.pdf">
+            Descargar
+            <span class="align-items-center">
+                <img src="/Curriculum/descargar_logo.png" alt="Logo" class="logo-img ml-2" width="12" height="12">
+            </span>
+        </a>
+    </div>
+
+    <!--CONTACTO-->
+    <!--titulo de seccion-->
+    <div class="div_titulo" id="div_contacto">
+        <h1>Contacto</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <img src="/Imagenes/Contacto/contacto.png" class="img-fluid" alt="...">
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    </div>
+
+    <!--*******************************
+        *  FIN DE CUERPO DE LA WEB    *
+        *******************************-->
+
+    <!--Scripts de JS de BootStrap para animaciones y ciertas funcionalidades de la web-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+
+    <!--Script personalizado para funciones especificas-->
+    <script src="script.js"></script>
+</body>
+<!--fin de la etiqueta body-->
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+</html>
